@@ -115,6 +115,7 @@ namespace pro_API.Controllers
 
             return new UserToken()
             {
+                EmailAddress = identityUser.Email,
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
                 Expiration = expiration
             };
