@@ -104,7 +104,7 @@ namespace pro_API.Controllers
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
-            var expiration = DateTime.UtcNow.AddYears(1);
+            var expiration = DateTime.UtcNow.AddDays(1);
 
             JwtSecurityToken token = new JwtSecurityToken(
                 issuer: null,

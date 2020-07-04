@@ -40,6 +40,7 @@ namespace pro_API
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(Options => Options.TokenValidationParameters = new TokenValidationParameters
                 {
